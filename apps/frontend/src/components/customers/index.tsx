@@ -16,16 +16,16 @@ interface Props {
 
 const Customers = ({ data, onChange, searchValue, isError }: Props) => {
   const [isModalVisible, setModalVisible] = useState<boolean>(false)
-  const [id, setId] = useState<number>(0)
+  const [id, setId] = useState<number>(-1)
 
   const openModal = (id: number) => {
-    ;<Modal isVisible={isModalVisible} onClose={closeModal} id={id} purchaseInfo={undefined} />
     setModalVisible(true)
+    setId(id)
   }
   const closeModal = () => setModalVisible(false)
   return (
     <StyledWhiteBoard.Card>
-      <div>가격대별 구매 빈도 차트</div>
+      <div>가장 많이 구매한 고객 목록</div>
 
       <div style={{ width: '100%', minHeight: '290px' }}>
         <div style={{ display: 'flex', gap: '10px' }}>
@@ -46,7 +46,7 @@ const Customers = ({ data, onChange, searchValue, isError }: Props) => {
             ))}
           />
         )}
-
+        <Modal isVisible={isModalVisible} onClose={closeModal} id={id} />
         {isError && <>검색된 데이터가 없습니다.</>}
       </div>
     </StyledWhiteBoard.Card>
