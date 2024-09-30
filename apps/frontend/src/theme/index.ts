@@ -60,22 +60,6 @@ export const theme: DefaultTheme = {
     th_background: '#F4F6F9',
     line: '#F0F2F4',
   },
-  button: {
-    primary: '#4870F6',
-    primary_hover: '#335FF5',
-
-    light_primary: 'rgba(72, 112, 246, 0.07)',
-    black: '#222429',
-    black_hover: '#161819',
-    darkgray: '#4D525C',
-    darkgray_hover: '#373B42',
-    gray: '#787F8F',
-    gray_hover: '#626975',
-    light_gray: '#F5F6F7',
-    negative: '#F4554A',
-    negative_hover: 'rgba(229, 79, 70, 1)',
-    disabled: '#E6E8EC',
-  },
 }
 
 export const _size = {
@@ -93,6 +77,7 @@ export const _size = {
 }
 
 export const _colors = {
+  primary: '#4870F6',
   white: '#fff',
   gray1: '#F8F8F8',
   gray2: '#F5F6F6',
