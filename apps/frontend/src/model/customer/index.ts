@@ -9,3 +9,11 @@ export interface CustomerFilter {
   sortBy: 'asc' | 'desc'
   name: string | undefined
 }
+
+export interface ResponseCustomerPurChaseInfo {
+  date: string
+  price: number
+  imgSrc: string
+  product: string
+  quantity: number
+}

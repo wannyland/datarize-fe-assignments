@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { addNumberComma } from '../../function'
+import { useModal } from '../../hooks/useModal'
 import { ResponseCustomers } from '../../model/customer'
-import Modal from '../atoms/Modal'
 import Select from '../atoms/Select'
 import Table from '../atoms/Table'
 import { StyledWhiteBoard } from '../atoms/WhiteBoard/index.styled'
+import CustomerModal from '../template/Modal/Customer'
 import { StyledTable } from './index.styled'
 
 interface Props {
@@ -15,14 +16,14 @@ interface Props {
 }
 
 const Customers = ({ data, onChange, searchValue, isError }: Props) => {
-  const [isModalVisible, setModalVisible] = useState<boolean>(false)
+  const { Modal } = useModal()
   const [id, setId] = useState<number>(-1)
 
   const openModal = (id: number) => {
-    setModalVisible(true)
-    setId(id)
+    Modal({
+      content: <CustomerModal id={id} />,
+    })
   }
-  const closeModal = () => setModalVisible(false)
   return (
     <StyledWhiteBoard.Card>
       <div>가장 많이 구매한 고객 목록</div>
@@ -46,7 +47,6 @@ const Customers = ({ data, onChange, searchValue, isError }: Props) => {
             ))}
           />
         )}
-        <Modal isVisible={isModalVisible} onClose={closeModal} id={id} />
         {isError && <>검색된 데이터가 없습니다.</>}
       </div>
     </StyledWhiteBoard.Card>

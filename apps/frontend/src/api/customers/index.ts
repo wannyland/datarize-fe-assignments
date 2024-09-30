@@ -11,7 +11,7 @@ const customers = {
   },
 
   getPurchaseInfo: async (id: number) => {
-    const response = await baseAxios.get(`customer/${id}/purchases`)
+    const response = await baseAxios.get(`customers/${id}/purchases`)
 
     return response.data
   },
