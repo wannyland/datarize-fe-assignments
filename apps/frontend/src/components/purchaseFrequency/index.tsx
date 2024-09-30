@@ -19,7 +19,7 @@ const PurchaseFrequency = ({ x, y }: Props) => {
   }
   return (
     <StyledWhiteBoard.Card>
-      <div style={{ display: 'flex', width: '100%' }}>가격대별 구매 빈도 차트</div>
+      <div>가격대별 구매 빈도 차트</div>
       <div style={{ width: '100%', minHeight: '290px' }}>
         <BarChart data={data} />
       </div>

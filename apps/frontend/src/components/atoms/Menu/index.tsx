@@ -16,7 +16,7 @@ const Menu = () => {
           <StyledMenu.Title $isActive={menuState === 'purchase'} onClick={() => menuHandler('purchase')}>
             고객 구매 빈도
           </StyledMenu.Title>
-          <StyledMenu.Title $isActive={menuState === 'members'} onClick={() => menuHandler('members')}>
+          <StyledMenu.Title $isActive={menuState === 'customers'} onClick={() => menuHandler('customers')}>
             고객 목록
           </StyledMenu.Title>
         </StyledMenu.Wrapper>

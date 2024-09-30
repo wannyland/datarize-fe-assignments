@@ -55,20 +55,5 @@ export const GlobalStyle = createGlobalStyle`
       cursor: pointer;
     }
 
-
-    /* 
-        1. 탭 하이라이트 컬러 초기화
-        2. outline 초기화
-    */
-    a,
-    button,
-    select,
-    input {
-        -webkit-tap-highlight-color: transparent;
-        outline: none;
-        border: none;
-
-        background-color: transparent;
-    }
   }
 `
