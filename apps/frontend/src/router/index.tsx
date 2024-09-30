@@ -1,4 +1,5 @@
 import { createBrowserRouter, Outlet, RouteObject } from 'react-router-dom'
+import Dashboard from '../components/template/DashBoard'
 import Home from '../pages/home'
 
 const pages: Array<RouteObject> = [
@@ -7,8 +8,13 @@ const pages: Array<RouteObject> = [
     element: <Outlet />,
     children: [
       {
-        index: true,
-        element: <Home />,
+        element: <Dashboard />,
+        children: [
+          {
+            path: '/dashboard',
+            element: <Home />,
+          },
+        ],
       },
     ],
   },

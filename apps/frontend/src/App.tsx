@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { GlobalStyle } from './theme/GlobalStyle'
 
-function App() {
+const App = () => {
   return (
     <>
       <GlobalStyle />

@@ -1,7 +1,9 @@
+import WhiteBoard from '../../components/atoms/WhiteBoard'
+
 const Home = () => {
   return (
     <>
-      <div>test</div>
+      <WhiteBoard />
     </>
   )
 }
